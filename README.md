@@ -3,7 +3,7 @@
 # 科学上网
 
 作者：左耳朵 [http://coolshell.cn](http://coolshell.cn)
-更新时间：2023-04-01
+更新时间：2023-04-19
 
 这篇文章可以写的更好，欢迎到 [https://github.com/haoel/haoel.github.io](https://github.com/haoel/haoel.github.io) 更新
 
@@ -103,9 +103,9 @@
 
 - [AWS LightSail](https://lightsail.aws.amazon.com/) 是一个非常便宜好用的服务，最低配置一个月 $3.5 美金，流量不限，目前的Zone不多，推荐使用日本，新加坡或美国俄勒冈（支持银联卡）。现对 2021/8/7 之后使用 Lightsail 的用户提供3个月的免费试用。
 - [AWS EC2](https://aws.amazon.com/cn/)香港、日本或韩国申请个免费试用一年的EC2 VPS （支持银联卡）
+- [Microsoft Azure](https://azure.microsoft.com/zh-cn/)提供免费一年的服务（B1S实例），而且每个月有 100G 的免费流量，并赠送200刀赠金。（需要国际信用卡）
 - [Google Cloud Platform](https://cloud.google.com/)提供免费试用，赠送300刀赠金（需要国际信用卡）
 - [Linode](https://www.linode.com)买个一月USD5刀的VPS
-- [Conoha](https://www.conoha.jp/zh/)上买一个日本的VPS，一个月900日元 （可以支付宝）
 - [Vultr](https://www.vultr.com)上买一个日本的VPS，一个月5刀 （可以支付宝）(注：据说被墙的IP太多）
 - [Oracle Cloud](https://www.oracle.com/cloud/free/)两台VPS无限期使用，可选美日韩等地（需要国际信用卡）
 
@@ -113,7 +113,7 @@
 > **注意**
 > - 在中国，因为有太多的网络提供商，所以，国内的网络也是很奇葩的，可以看到的是，不同的地方，不同的网络，到不同的国家完全不一样，而且还经常性地调整路由，所以，经常性地有时候快有时候慢，简直就是随机的。所以，像我这样要求比较高的人，一般会备3-5个不同国家地区的VPS，以保障上网的速度。
 >
-> - 香港网速应该是比较好的，但是香港的成本也是比较高的。台湾的网速也是不错的，日本的网速其次，新加坡再次之，然后是美国的东海岸。但是，因为线路的问题，如果没有为中国区优化的线路，丢包率是非常大的，日本区 ping 值虽然很低，但是经常性的丢包，好的线路的美国的 ping 值虽然大，但是也会飞快。
+> - 香港网速应该是比较好的，但是香港的成本也是比较高的（使用 Microsoft Azure 的 East Asia 可以把 VPS 买在香港区）。台湾的网速也是不错的，日本的网速其次，新加坡再次之，然后是美国的东海岸。但是，因为线路的问题，如果没有为中国区优化的线路，丢包率是非常大的，日本区 ping 值虽然很低，但是经常性的丢包，好的线路的美国的 ping 值虽然大，但是也会飞快。
 >
 > - 日本区的网络质量并不一定很好，有时候快的飞快，但有时候会有很大的丢包率（不同的网络不一样），有时候会很慢。上述的这几个VPS服务商中，AWS韩国和日本会好点，然后是 [Linode](https://www.linode.com/)，最后是 [Vultr](https://www.vultr.com/)（如果你有更好的，请推荐）
 >
@@ -133,8 +133,9 @@
 
 关于 `CN2` 线路的主机提供商，好些都不靠谱，只推荐下面两个，首推搬瓦工。
 
-- [搬瓦工](https://bwh8.net/aff.php?aff=39384)  这应该是美区最好的一个用来科学上网的VPS提供商了，实测飞快。购买时你需要注意VPS规格上的 `CN2` 和 `GIA` 的描述。（注：点击主页右上角的 `regisiter` 以后，你可以看到页面上方有两个导航条，在下面的导航条上点 `Services` -> `Order New Services` 就可以看到所有的列表了。买完后，你可能需要重装一下操作系统，装成64位带BBR的 ）
-- [Hostdare](https://bill.hostdare.com/aff.php?aff=3397) 的 CN2 GIA 产品也是三网直连，KVM 和 OpenVZ 两种架构，KVM 产品长期缺货
+- [搬瓦工](https://bwh8.net/aff.php?aff=39384)  这应该是美区最好的一个用来科学上网的VPS提供商了，实测飞快，无论在中国哪个地方都很快。购买时你需要注意VPS规格上的 `CN2` 和 `GIA` 的描述。（注：点击主页右上角的 `regisiter` 以后，你可以看到页面上方有两个导航条，在下面的导航条上点 `Services` -> `Order New Services` 就可以看到所有的列表了。买完后，你可能需要重装一下操作系统，装成64位带BBR的 ）
+
+- [HostDare](https://bill.hostdare.com/aff.php?aff=3397) 的 CN2 GIA 产品也是三网直连。专门有两个分类针对中国的 CN2 GIA，一个是 Premium China Optimized NVMeKVM，一组是 Premium China Optimized KVM。支持支付宝和银联。购买后要等一段时间（2-4个小时）才会创建好，IP 有可能会给你是一个已经被封了的，如果是这样，你要在3天内申请换IP，都是免费的。时间长了也可以换，就是时间比较长，而且还要花一定的费用（3美金）。线路质量还不错，不过没有搬瓦工快。
 
 更多的可以参考这篇文章《[CN2 GIA VPS主机收集整理汇总-电信,联通,移动三网CN2 GIA线路VPS主机](https://wzfou.com/cn2-gia-vps/)》（注：随时间推移，这篇文章的内容可能会失效）
 
@@ -356,7 +357,7 @@ gost -L ss://aes-128-gcm:passcode@:1984 -F 'https://USER:PASS@DOMAIN:443'
 对于手机端
 
  - iPhone，可以考虑使用 `ShadowRocket` （需要付费），其中使用 HTTPS 的代理，配置上就好了。
- - Android，可以考虑使用这个Plugin - [ShadowsocksGostPlugin](https://github.com/xausky/ShadowsocksGostPlugin)
+ - Android，可以考虑使用这个Plugin - [ShadowsocksGostPlugin](https://github.com/xausky/ShadowsocksGostPlugin)，参考 [#33](https://github.com/xausky/ShadowsocksGostPlugin/issues/33) 进行配置
 
 **注明**：如果你之前使用了Chrome插件 SwitchyOmega，如果无法直接配置HTTPS代理，具体原因可能是因为你设置了`probe_resist`以开启探测防御功能。这里，你需要在服务器端设置 `knock` 参数（参看 [用 Gost 设置 HTTPS 服务](#33-用-gost-设置-https-服务) 中的“注意”一节 ）
 
@@ -484,7 +485,7 @@ VPS 上正常安装并配置好 V2Ray，注意两点:
 
 不必担心把路由器刷废了，华硕的路由器可以让你一键重置回来
 
-**1）下载固件**。先到 [https://asuswrt.lostrealm.ca/download](https://asuswrt.lostrealm.ca/download) 下载相应的固件，并解压。（我下载的是 `RT-AC68U_380.61_0.zip` ）
+**1）下载固件**。先到 [https://www.asuswrt-merlin.net/download](https://www.asuswrt-merlin.net/download) 下载相应的固件，并解压。（我下载的是 `RT-AC68U_380.61_0.zip` ）
 
 **2）升级固件**。登录到你的路由器后台 `http://192.168.1.1/` ，在 `系统管理` -> `固件升级` 中上传固件文件（我上传的是：`RT-AC68U_380.61_0.trx`）
 
@@ -968,6 +969,9 @@ Host github.com
 
 所谓“原生 IP”就是指该网站的 IP 地址和其机房的 IP 地址是一致的，但是，很多 IDC 提供商的 IP 都是从其它国家调配来的，这导致我们就算是翻墙了，也是使用了美国的 VPS，但是还是访问不了相关的服务。所以，我们需要使用 Cloudflare Warp 来访问这些网站。
 
+下面有几种安装方式：
+- 全局模式。这种模式下，所有流量都会通过 Cloudflare 的网络，相当于VPN。
+- 代理模式。通过在服务器本机启动一个 SOCKS5 代理，然后把需要的流量转发到这个代理上。
 
 #### 9.4.1 WARP 模式
 
@@ -1047,6 +1051,19 @@ echo "deb [arch=amd64 signed-by=/usr/share/keyrings/cloudflare-warp-archive-keyr
 sudo apt update
 sudo apt install cloudflare-warp
 ```
+> **Note**
+>
+> 安装过程中，可能会出现如下错误：
+> ```
+> The following packages have unmet dependencies:
+> cloudflare-warp : Depends: nftables but it is not going to be installed
+>                   Depends: gnupg2 but it is not going to be installed
+>                   Depends: desktop-file-utils but it is not going to be installed
+>                   Depends: libnss3-tools but it is not going to be installed
+> linux-headers-aws : Depends: linux-headers-5.3.0-1028-aws but it is not going to be installed
+> E: Unmet dependencies. Try 'apt --fix-broken install' with no packages (or specify a solution).
+> ```
+> 你先执行 `sudo apt --fix-broken install`，然后再执行 `sudo apt install cloudflare-warp` 即可。
 
 **2） 配置 Cloudflare WARP**
 
@@ -1097,10 +1114,8 @@ curl -x "socks5://127.0.0.1:40000" ipinfo.io
 如果输出现如下的信息，那么恭喜你，你已经成功了
 
 ```json
-{
   "ip": "104.28.247.70",
   "org": "AS13335 Cloudflare, Inc."
-}
 ```
 
 **5）配置 Gost 路由转发**
@@ -1112,7 +1127,7 @@ gost -L "http://:8080" -F "socks5://127.0.0.1:40000"
 ```
 当然，上面的配置是不够好的，我们最好使用有证书的 HTTPS 代理。这里的内容参见于 前的面 [3.3 用 Gost 设置 HTTPS 服务](#33-用-gost-设置-https-服务)。
 
-为了使用两种不同的代理，Gost需要启动两个服务：
+为了使用两种不同的代理，你可以启动两个 gost 服务：
 
 - 一个是通过 443 端口直接代理
 - 另一个是通过 8443 端口转发到 Cloudflare WARP 的 Socks5 代理上
@@ -1136,12 +1151,16 @@ sudo docker run -d --name gost \
 sudo docker run -d --name gost-warp \
     -v ${CERT_DIR}:${CERT_DIR}:ro \
     --net=host ginuerzh/gost \
-    -L "http2://${USER}:${PASS}@${BIND_IP}:8443?cert=${CERT}&key=${KEY}&probe_resist=code:404&knock=www.google.com" -F "socks://localhost:40000"
+    -L "http2://${USER}:${PASS}@${BIND_IP}:8443?cert=${CERT}&key=${KEY}&probe_resist=code:404&knock=www.google.com" \
+    -F "socks://localhost:40000"
 ```
 
 > **Note**
 >
-> 你也可以使用 V2Ray 的路由模式，参见 [V2Ray 的路由功能](https://www.v2ray.com/chapter_02/03_routing.html)。V2Ray的路由模式就比 gost 要强很多。你还可以通过使用预定义域名列表 `geolocation-cn` 把其的路由转发到 Cloudflare WARP 的 Socks5 代理上，以避免你的 VPS 的 IP 被暴露。
+> 1) 你也可以使用 gost 的 `bypass`参数来让相应的域名的流量转发到 Cloudflare WARP 的 Socks5 代理上。如：`
+-F=socks5://localhost:40000?bypass=~*.openai.com,openai.com&notls=true`
+>
+> 2) 你也可以使用 V2Ray 的路由模式，参见 [V2Ray 的路由功能](https://www.v2ray.com/chapter_02/03_routing.html)。V2Ray的路由模式就比 gost 要强很多。你还可以通过使用预定义域名列表 `geolocation-cn` 把其的路由转发到 Cloudflare WARP 的 Socks5 代理上，以避免你的 VPS 的 IP 被暴露。
 
 **其它事宜**
 
@@ -1160,9 +1179,14 @@ Status update: Unable to connect. Reason: Insufficient system resource: file des
 你需要修改文件描述符的限制，这类的文章比较多，你自行 Google，这里就不再赘述了。如果你想配置 Cloudflare WARP 文件描述符的限制，你可以编辑 `/lib/systemd/system/warp-svc.service`，在 `[Service]` 下面添加如下内容：
 
 ```ini
-[Service]
 LimitNOFILE=65535
 LimitNOFILESoft=65535
+```
+然后，重启服务：
+
+```shell
+sudo systemctl daemon-reload
+sudo systemctl restart warp-svc.service
 ```
 
 #### 9.4.3 Docker 代理
@@ -1170,7 +1194,8 @@ LimitNOFILESoft=65535
 用 Docker 可以更方便地部署起一个 Cloudflare WARP Proxy，只需要一行命令:
 
 ```shell
-docker run -v $HOME/.warp:/var/lib/cloudflare-warp:rw --restart=always --name=cloudflare-warp e7h4n/cloudflare-warp
+docker run -v $HOME/.warp:/var/lib/cloudflare-warp:rw \
+  --restart=always --name=cloudflare-warp e7h4n/cloudflare-warp
 ```
 
 这条命令会在容器上的 40001 开启一个 socks5 代理，接下来查看这个容器的 ip:
@@ -1190,12 +1215,12 @@ docker run --rm curlimages/curl --connect-timeout 2 -x "socks5://172.17.0.2:4000
 接下来我们给 Gost 增加一个条件转发规则，转发我们希望的域名、地址到 cloudflare 的 warp 网络:
 
 ```
--F=socks5://172.17.0.2:40001?notls=true&bypass=~*.openai.com,openai.com
+-F=socks5://172.17.0.2:40001?bypass=~*.openai.com,openai.com&notls=true
 ```
 
-`bypass=~` 的含义是，只有命中后面规则时才转发请求到 `172.17.0.2:40001` 这个 socks5 代理。
-
-接下来，通过这个 Gost 代理访问 openai.com 时，就会走 warp 网络了。
+> **Note**
+>
+> `bypass=~` 的含义是，只有命中后面规则时才转发请求到 `172.17.0.2:40001` 这个 socks5 代理。接下来，通过这个 Gost 代理访问 `openai.com` 时，就会走 warp 网络了。
 
 ## 10. 其它
 
